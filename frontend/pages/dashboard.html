@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Job Tracker - Dashboard</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body class="dashboard">
+    <div class="app-container">
+      <!-- Sidebar Navigation -->
+      <nav class="sidebar">
+        <div class="sidebar-header">
+          <div class="logo go-to-dashboard">
+            <i class="fas fa-briefcase"></i>
+            <span>JobTracker</span>
+          </div>
+        </div>
+
+        <ul class="nav-menu">
+          <li class="nav-item">
+            <a href="dashboard.html" class="nav-link go-to-dashboard">
+              <i class="fas fa-chart-line"></i>
+              <span>Dashboard</span>
+            </a>
+          </li>
+          <li class="nav-item active">
+            <a href="#" class="nav-link">
+              <i class="fas fa-users"></i>
+              <span>All References</span>
+            </a>
+          </li>
+          <li class="nav-item add-app">
+            <a href="#" class="nav-link">
+              <i class="fas fa-plus-circle"></i>
+              <span>Add Application</span>
+            </a>
+          </li>
+        </ul>
+      </nav>
+
+      <!-- Main Content -->
+      <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+          <div class="header-left">
+            <h1>All References</h1>
+            <p class="header-subtitle">Manage your professional references</p>
+          </div>
+          <div class="header-right">
+            <button class="btn btn-primary" onclick="openAddReferenceModal()">
+              <i class="fas fa-plus"></i>
+              Add New Reference
+            </button>
+            <button class="btn btn-secondary" id="logoutBtn">
+              <i class="fas fa-sign-out-alt"></i>
+              Logout
+            </button>
+            <div class="profile-menu">
+              <span id="profile-name" class="profile-name"
+                >First / Last Name</span
+              >
+            </div>
+          </div>
+        </header>
+
+        <!-- Search and Filter Section -->
+        <div class="search-filter-section">
+          <div class="search-bar">
+            <div class="search-input-wrapper">
+              <i class="fas fa-search search-icon"></i>
+              <input
+                type="text"
+                class="search-input"
+                placeholder="Search references by name, company, or title..."
+              />
+            </div>
+          </div>
+          <div class="filter-controls">
+            <select class="filter-select">
+              <option value="">All Types</option>
+              <option value="manager">Manager</option>
+              <option value="colleague">Colleague</option>
+              <option value="client">Client</option>
+              <option value="mentor">Mentor</option>
+            </select>
+            <select class="filter-select">
+              <option value="">All Companies</option>
+              <option value="google">Google</option>
+              <option value="microsoft">Microsoft</option>
+              <option value="amazon">Amazon</option>
+              <option value="apple">Apple</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- References Grid -->
+        <div class="references-grid" id="referencesGrid">
+          <!-- References will be loaded here dynamically -->
+        </div>
+      </main>
+    </div>
+
+    <!-- Add Reference Modal -->
+    <div id="addReferenceModal" class="modal" style="display: none">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h2>Add New Reference</h2>
+          <button class="modal-close" onclick="closeAddReferenceModal()">
+            <i class="fas fa-times"></i>
+          </button>
+        </div>
+        <form class="reference-form" id="referenceForm">
+          <div class="form-grid">
+            <div class="form-group">
+              <label class="form-label">First Name *</label>
+              <input type="text" class="form-input" name="firstName" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Last Name *</label>
+              <input type="text" class="form-input" name="lastName" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Job Title *</label>
+              <input type="text" class="form-input" name="jobTitle" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Company *</label>
+              <input type="text" class="form-input" name="company" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Email *</label>
+              <input type="email" class="form-input" name="email" required />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Phone</label>
+              <input type="tel" class="form-input" name="phone" />
+            </div>
+            <div class="form-group">
+              <label class="form-label">Reference Type *</label>
+              <select class="form-select" name="referenceType" required>
+                <option value="">Select Type</option>
+                <option value="manager">Manager</option>
+                <option value="colleague">Colleague</option>
+                <option value="client">Client</option>
+                <option value="mentor">Mentor</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label class="form-label">LinkedIn Profile</label>
+              <input
+                type="url"
+                class="form-input"
+                name="linkedIn"
+                placeholder="https://linkedin.com/in/..."
+              />
+            </div>
+            <div class="form-group full-width">
+              <label class="form-label">Relationship Description</label>
+              <textarea
+                class="form-textarea"
+                name="relationship"
+                placeholder="Describe your working relationship with this reference..."
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-actions">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              onclick="closeAddReferenceModal()"
+            >
+              Cancel
+            </button>
+            <button type="submit" class="btn btn-primary">Add Reference</button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <script src="../js/dashboard.js"></script>
+  </body>
+</html>
