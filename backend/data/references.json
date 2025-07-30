@@ -1,0 +1,54 @@
+{
+  "1": [
+    {
+      "id": "4987d82f-abbc-4af3-908b-7d8ab78bcc47",
+      "firstName": "Michael",
+      "lastName": "Chen",
+      "jobTitle": "Lead Frontend Developer",
+      "company": "Microsoft",
+      "email": "m.chen@microsoft.com",
+      "phone": "(555) 987-6543",
+      "referenceType": "colleague",
+      "linkedIn": "https://linkedin.com/in/michaelchen",
+      "relationship": "Collaborated on multiple cross-functional projects. Excellent technical expertise."
+    },
+    {
+      "id": "4ce66137-b589-4026-b0f2-ddd8d75322bc",
+      "firstName": "Vaibhav",
+      "lastName": "Adesara",
+      "jobTitle": "JAVA Intern",
+      "company": "Dolor Cloud",
+      "email": "vaibhavsocial1111@gmail.com",
+      "phone": "999888999",
+      "referenceType": "manager",
+      "linkedIn": "",
+      "relationship": ""
+    },
+    {
+      "id": "8fa2e0f8-1eef-4f19-b74c-4fb0ecb0e631",
+      "firstName": "JOHN",
+      "lastName": "DoE",
+      "jobTitle": "Service Team Member",
+      "company": "Veneer Solutions",
+      "email": "j@d.com",
+      "phone": "234234234234",
+      "referenceType": "client",
+      "linkedIn": "http://127.0.0.1:5500/frontend/pages/dashboard.html",
+      "relationship": "TESTING"
+    }
+  ],
+  "3": [
+    {
+      "id": "968073ba-2e1f-479d-8f57-4c12bcf7b5d6",
+      "firstName": "Vaibhav",
+      "lastName": "Adesara",
+      "jobTitle": "Software Developer",
+      "company": "Tech Inc.",
+      "email": "vaibhav@example.com",
+      "phone": "1234567890",
+      "referenceType": "Professional",
+      "linkedIn": "https://linkedin.com/in/vaibhav",
+      "relationship": "Worked together at Tech Inc."
+    }
+  ]
+}
